@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import '../styles/global.scss';
 
-const app = () =>{
-    return(
-        <h1>Hola mundo!</h1>
-    );
+const App = () => {
+	return (
+		<h1>Hola Mundo, Bienvenidos al Curso Practico de React!</h1>
+	);
 }
 
-export default app;
+export default App;
