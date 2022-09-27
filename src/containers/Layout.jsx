@@ -1,7 +1,7 @@
 import React from "react";
 
-const layout = ({children})  => {
-    return(
+const layout = ({ children }) => {
+    return (
         <div className="Layout">
             {children}
         </div>
