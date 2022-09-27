@@ -30,7 +30,7 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.s[ac]ss$/i,
+				test: /\.(css|scss)$/,
 				use: [
 					"style-loader",
 					"css-loader",
@@ -48,4 +48,9 @@ module.exports = {
 			filename: '[name].css'
 		}),
 	],
+	devServer:{
+		static: path.join(__dirname, 'dist'),
+		compress: true,
+		port:3005,
+	}
 }
