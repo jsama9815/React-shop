@@ -8,8 +8,8 @@ const API = 'https://api.escuelajs.co/api/v1/products';
 const ProductList = () => {
 	const [products, setProducts] = useState ([]);
 	useEffect(async() => {
-		const Response = await axios(API);
-		setProducts(Response.data);
+		const response = await axios(API);
+		setProducts(response.data);
 	}, []); 
 	return (
 		<section className="main-container">
