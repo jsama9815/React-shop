@@ -8,15 +8,17 @@ import AppContex from '../contex/AppContex';
 
 const App = () => {
 	const initialState = useInitialState();
+	console.log(initialState);
 	return (
-		<AppContex.Provider value={initialState}>
 		<div>
+		<AppContex.Provider value={initialState}>
 			<Layout>
 				<RouterProvider router={router} />
 			</Layout>
+			</AppContex.Provider>
 		</div>
-		</AppContex.Provider>
 	);
+	
 }
 
 export default App;

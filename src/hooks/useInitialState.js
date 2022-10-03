@@ -13,7 +13,8 @@ const useInitialState = () =>{
             ...state,
             cart:[...state.cart,payload]
         });
- }
+       
+ };
  return{
     state,
     addtoCart
