@@ -13,7 +13,6 @@ const ProductList = () => {
 				{products.map(product => (
 					<ProductItem product={product} key={product.id} />
 				)) }
-				
 			</div>
 		</section>
 	);

@@ -1,24 +1,25 @@
 import { useState } from "react";
 
 const initialState = {
-    cart:[],
-
+    cart: [],
 }
 
 const useInitialState = () =>{
-    const [state,setstate] = useState(initialState);
+    const [state, setState] = useState(initialState);
 
     const addtoCart = (payload) => {
-        setstate({
-            ...state,
-            cart:[...state.cart,payload]
+        setState({
+            cart: [
+                ...state.cart,
+                payload
+            ]
         });
-       
- };
- return{
-    state,
-    addtoCart
- }
+    };
+
+    return  {
+        state,
+        addtoCart
+    }
 }
 
 export default useInitialState;

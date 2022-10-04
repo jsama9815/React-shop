@@ -10,7 +10,6 @@ const Login = () => {
 			username: formdata.get('email'),
 			password : formdata.get('password')
 		}
-		console.log(data);
 	}
 	return (
 		<div className="Login">
@@ -18,7 +17,7 @@ const Login = () => {
 				<img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
 				<form action="/" className="form" ref={form}>
 					<label htmlFor="email" className="label">Email address</label>
-					<input type="text" name="email" placeholder="platzi@example.cm" className="input input-email" />
+					<input type="text" name="email" placeholder="test@example.com" className="input input-email" />
 					<label htmlFor="password" className="label">Password</label>
 					<input type="password" name="password" placeholder="*********" className="input input-password" />
 					<button type="submit"

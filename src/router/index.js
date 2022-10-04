@@ -10,50 +10,9 @@ import CreateAccount from '../pages/CreateAccount';
 import Checkout from '../pages/Checkout';
 import Orders from '../pages/Orders';
 import NotFound from '../pages/NotFound';
+import routes from './routes'
 import '../styles/global.css';
 
-
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <Home />,
-	},
-	{
-		path: "/login",
-		element: <Login />,
-	},
-	{
-		path: "/password-recovery",
-		element: <PasswordRecovery />,
-	},
-	{
-		path: "/send-email",
-		element: <SendEmail />,
-	},
-    {
-		path: "/new-password",
-		element: <NewPassword />,
-	},
-    {
-		path: "/account",
-		element: <MyAccount />,
-	},
-    {
-		path: "/CreateAccount",
-		element: <CreateAccount />,
-	},
-    {
-		path: "/checkout",
-		element: <Checkout />,
-	},
-    {
-		path: "/orders",
-		element: <Orders />,
-	},
-    {
-		path: "*",
-		element: <NotFound />,
-	},
-]);
+const router = createBrowserRouter(routes);
 
 export default router

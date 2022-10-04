@@ -1,20 +1,16 @@
 import React from 'react';
+import List from './List'
 import '@styles/Menu.scss';
 
 const Menu = () => {
+	const menuElements = [
+		{ name: 'My orders', to: '/', class: 'title' },
+		{ name: 'My account', to: '/', },
+		{ name: 'Sign out', to: '/', }
+	]
 	return (
 		<div className="Menu">
-			<ul>
-				<li>
-					<a href="/" className="title">My orders</a>
-				</li>
-				<li>
-					<a href="/">My account</a>
-				</li>
-				<li>
-					<a href="/">Sign out</a>
-				</li>
-			</ul>
+			<List elements={menuElements} />
 		</div>
 	);
 }
