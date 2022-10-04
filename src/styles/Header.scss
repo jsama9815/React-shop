@@ -5,6 +5,10 @@ nav {
 	justify-content: space-between;
 	padding: 0 24px;
 	border-bottom: 1px solid var(--very-light-pink);
+	width: calc(100% - 48px);
+	top: 0;
+	position: fixed;
+	background-color: white;
 }
 .menu {
 	display: none;
@@ -20,6 +24,7 @@ nav {
 	display: flex;
 	align-items: center;
 	height: 60px;
+	margin-left: 20px;
 }
 .navbar-left {
 	display: flex;
@@ -62,6 +67,9 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.navbar-shopping-cart img{
+	cursor: pointer;
 }
 @media (max-width: 640px) {
 	.menu {

@@ -1,4 +1,7 @@
 @import 'vars';
+@keyframes swipeLeft {
+	100% {transform: translateX(-360px);}
+}
 
 .MyOrder {
 	width: 360px;
@@ -6,6 +9,26 @@
 	box-sizing: border-box;
 	position: absolute;
 	right: 0;
+	background-color: white;
+	top: 60px;
+	bottom: 0;
+	border-radius: 6px;
+	border: 1px solid var(--very-light-pink);
+	position: fixed;
+	transition: 1s ease;
+	z-index: 1;
+	overflow-y: auto;
+}
+.arrow{
+	cursor: pointer;
+}
+.order-total{
+position: sticky;
+bottom: 74px;
+}
+.add-cart-button{
+position: sticky;
+bottom: 0;
 }
 .title-container {
 	display: flex;
