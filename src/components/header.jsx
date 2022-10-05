@@ -13,9 +13,11 @@ const Header = () => {
 	const [ toggle, setToggle ] = useState(false);
 	const [ toggleOrders,setToggleOrders ] = useState(false);
 	const { state } = useContext(appcontext);
+
 	const handleToggle = () => {
 		setToggle(!toggle);
-	}
+	};
+
 	const navBarElements = [
 		{ name: 'All', to: '/', class: 'title' },
 		{ name: 'Clothes', to: '/', },
@@ -41,7 +43,7 @@ const Header = () => {
 				</ul>
 			</div>
 			{ toggle && <Menu /> }
-			{ toggleOrders && <MyOrder /> }
+			{ toggleOrders && <MyOrder closeMenu={() => setToggleOrders(false)} /> }
 		</nav>
 	);
 }

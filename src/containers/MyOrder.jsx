@@ -6,19 +6,25 @@ import arrow from '@icons/flechita.svg';
 
 
 
-const MyOrder = () => {
+const MyOrder = (props) => {
 	const { state } = useContext(AppContex);
 	const [toggleClose,setToggleClose] = useState(false);
-	
+
 	const sumTotal = () =>{
 		const reducer = (accumalator, currentValue) => accumalator + currentValue.price;
 		const sum = state.cart.reduce(reducer,0);
 		return sum;
-	}
+	};
+
+	const handleCloseMenu = () => {
+		setToggleClose(!toggleClose);
+		props.closeMenu();
+	};
+
 	return (
 		<aside className="MyOrder">
 			<div className="title-container">
-				<img src={ arrow } alt="arrow" onClick={ () => setToggleClose(!toggleClose) } className='arrow'/>
+				<img src={arrow} alt="arrow" onClick={handleCloseMenu} className='arrow'/>
 				<p className="title">My order</p>
 			</div>
 			<div className="my-order-content">
